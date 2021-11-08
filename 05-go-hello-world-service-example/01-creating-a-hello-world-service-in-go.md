@@ -35,7 +35,7 @@ To just dive straight in, you can download the Hello World Service source [(help
 
 
 ## Generating Server Stubs
-Even if you want to work through this example from scratch, you still need the OpenAPI Specification file `HelloWorldService-1.json` [(help me)][hws-spec]. Create a new project folder and copy the file you just downloaded to it, them check that you have the latest version of **OpenAPI Generator** installed [(help me)](https://openapi-generator.tech).
+Even if you want to work through this example from scratch, you still need the OpenAPI Specification file `HelloWorldService-1.json` [(help me)][hws-spec]. Create a new project folder and copy the file you just downloaded to it, then check that you have the latest version of **OpenAPI Generator** installed [(help me)](https://openapi-generator.tech).
 
 ```bash
 $ openapi-generator version 
@@ -46,7 +46,7 @@ We are now ready to generate the Go server stubs from`HelloWorldService-1.json` 
 
 ```bash
 $ openapi-generator generate \
-  --generator-name="go-server" \
+  --generator-name "go-server" \
   --input-spec "HelloWorldService-1.json"
 .
 .
