@@ -147,10 +147,12 @@ COPY --from=builder /lib/ld-musl-*.so.1 /lib/
 USER helloworld:helloworld
 ENTRYPOINT ["/helloworld"]
 ```
-NOTE: upx is not distributed as an Alpine package for aarch64 (Apple M1s). In this case, download the aarch64 upx binary from , untar and place the upx binary in the project root folder.
+NOTE: upx is not distributed as an Alpine package for aarch64 (Apple M1s). In this case, download the aarch64 (arm64) upx binary from https://github.com/upx/upx/releases, untar and place the upx binary in the project root folder.
 Then replace ```RUN apk update && apk add ca-certificates upx git``` in the DOCKERFILE  with 
-```RUN apk update && apk add ca-certificates git
-COPY upx /usr/bin```
+```
+RUN apk update && apk add ca-certificates git
+COPY upx /usr/bin
+```
 <br>
 
 
