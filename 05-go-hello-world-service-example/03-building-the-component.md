@@ -143,11 +143,14 @@ COPY --from=builder /go/src/github.com/CiscoDevNet/msx-examples/go-hello-world-s
 COPY --from=builder /etc/passwd /etc/passwd
 COPY --from=builder /etc/group /etc/group
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-COPY --from=builder /lib/ld-musl-x86_64.so.1 /lib/ld-musl-x86_64.so.1
+COPY --from=builder /lib/ld-musl-*.so.1 /lib/
 USER helloworld:helloworld
 ENTRYPOINT ["/helloworld"]
 ```
-
+NOTE: upx is not distributed as an Alpine package for aarch64 (Apple M1s). In this case, download the aarch64 upx binary from , untar and place the upx binary in the project root folder.
+Then replace ```RUN apk update && apk add ca-certificates upx git``` in the DOCKERFILE  with 
+```RUN apk update && apk add ca-certificates git
+COPY upx /usr/bin```
 <br>
 
 
