@@ -24,7 +24,7 @@ First you must make or download an MSX Component before you can deploy it. They 
 
 
 ## Deploying the Component
-Open Cisco MSX Portal and log in as superuser then navigate to "Settings->Component Manager".
+Open Cisco MSX Portal and log in as superuser then navigate to "Settings->Component Management".
 
 ![](images/deploying-component-1.png?raw=true)
 
