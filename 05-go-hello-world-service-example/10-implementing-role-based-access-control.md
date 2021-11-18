@@ -23,7 +23,7 @@
 
 
 ## Introduction
-All the Hello World Service requests we have made so were insecure because we have not passed an access token in the
+All the Hello World Service requests we have made so far were insecure because we have not passed an access token in the
 header. In this guide, we will add that security and show how to validate the access token and get a list of permissions
 associated with it.
 
