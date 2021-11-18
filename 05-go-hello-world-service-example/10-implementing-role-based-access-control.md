@@ -327,7 +327,7 @@ func AddSecureRoutes(router *mux.Router, routers ...openapi.Router) *mux.Router 
 <br>
 
 ### main.go
-Update `main.go` with the code belo, we have included the entire text here even though not all of it has changed. See if you can spot the differences.
+Update `main.go` with the code below, we have included the entire text here even though not all of it has changed. See if you can spot the differences.
 
 ```go
 package main
